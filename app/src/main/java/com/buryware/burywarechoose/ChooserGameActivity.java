@@ -30,34 +30,34 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.firebase.ui.database.SnapshotParser;
-import com.google.android.gms.auth.api.Auth;
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.google.android.gms.auth.api.signin.GoogleSignInResult;
-import com.google.android.gms.common.api.ApiException;
+//import com.firebase.ui.database.FirebaseRecyclerOptions;
+//import com.firebase.ui.database.SnapshotParser;
+//import com.google.android.gms.auth.api.Auth;
+//import com.google.android.gms.auth.api.signin.GoogleSignIn;
+//import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+//import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+//import com.google.android.gms.auth.api.signin.GoogleSignInResult;
+//import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.analytics.FirebaseAnalytics;
-import com.google.firebase.appindexing.Action;
-import com.google.firebase.appindexing.Indexable;
-import com.google.firebase.appindexing.builders.Indexables;
-import com.google.firebase.appindexing.builders.PersonBuilder;
-import com.google.firebase.auth.AuthCredential;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.GoogleAuthProvider;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
-import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
+//import com.google.android.gms.tasks.OnCompleteListener;
+//import com.google.android.gms.tasks.OnFailureListener;
+//import com.google.android.gms.tasks.OnSuccessListener;
+//import com.google.android.gms.tasks.Task;
+//import com.google.firebase.analytics.FirebaseAnalytics;
+//import com.google.firebase.appindexing.Action;
+//import com.google.firebase.appindexing.Indexable;
+//import com.google.firebase.appindexing.builders.Indexables;
+//import com.google.firebase.appindexing.builders.PersonBuilder;
+//import com.google.firebase.auth.AuthCredential;
+//import com.google.firebase.auth.AuthResult;
+//import com.google.firebase.auth.FirebaseAuth;
+//import com.google.firebase.auth.FirebaseUser;
+//import com.google.firebase.auth.GoogleAuthProvider;
+//import com.google.firebase.database.DataSnapshot;
+//import com.google.firebase.database.DatabaseReference;
+//import com.google.firebase.database.FirebaseDatabase;
+//import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
+//import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -99,13 +99,13 @@ public class ChooserGameActivity extends AppCompatActivity {
     private TextView mLevelStatus = null;
     private boolean mGameOver = false;
 
-    public static FirebaseAuth mFirebaseAuth;
+   /* public static FirebaseAuth mFirebaseAuth;
     public static FirebaseUser mFirebaseUser;
 
     public static DatabaseReference mFirebaseDatabaseReference;
     public static FirebaseAnalytics mFirebaseAnalytics;
-    public static FirebaseRemoteConfig mFirebaseRemoteConfig;
-    private GoogleSignInClient mGoogleSignInClient;
+    public static FirebaseRemoteConfig mFirebaseRemoteConfig;*/
+    //private GoogleSignInClient mGoogleSignInClient;
 
     public GoogleApiClient mGoogleApiClient;
 
@@ -244,13 +244,13 @@ public class ChooserGameActivity extends AppCompatActivity {
             }
         });
 
-        mAwardsButton = findViewById(R.id.awardsbutton);
+        /*mAwardsButton = findViewById(R.id.awardsbutton);
         mAwardsButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)
             {
                 ShowAwards();
             }
-        });
+        });*/
 
         mDonateButton = findViewById(R.id.donatebutton);
         mDonateButton.setOnClickListener(new View.OnClickListener() {
@@ -260,13 +260,13 @@ public class ChooserGameActivity extends AppCompatActivity {
             }
         });
 
-        mTournamentButton = findViewById(R.id.tournamnetbutton);
+       /* mTournamentButton = findViewById(R.id.tournamnetbutton);
         mTournamentButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)
             {
                 DoTournament();
             }
-        });
+        });*/
 
        /* mFirstUserRecButton = findViewById(R.id.highestawardsbutton);   // todo maybe later
         mFirstUserRecButton.setOnClickListener(new View.OnClickListener() {
@@ -276,13 +276,14 @@ public class ChooserGameActivity extends AppCompatActivity {
             }
         });*/
 
-        mFirstUserRecButton = findViewById(R.id.thanksbutton);
+       /* mFirstUserRecButton = findViewById(R.id.thanksbutton);
         mFirstUserRecButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)
             {
                 DoFirstUserRec();
             }
-        });
+        });*/
+/*
 
         // Initialize FirebaseAuth
         mFirebaseAuth = FirebaseAuth.getInstance();
@@ -332,6 +333,7 @@ public class ChooserGameActivity extends AppCompatActivity {
         // Initialize Firebase Auth
         mFirebaseAuth = FirebaseAuth.getInstance();
         mFirebaseUser = mFirebaseAuth.getCurrentUser();
+*/
 
       /*  if (mFirebaseUser == null) {
             // Not signed in, launch the Sign In activity
@@ -373,7 +375,7 @@ public class ChooserGameActivity extends AppCompatActivity {
 
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
         if (requestCode == RC_SIGN_IN) {
-            GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
+      /*      GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
             if (result.isSuccess()) {
                 // Google Sign In was successful, authenticate with Firebase
                 Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
@@ -382,14 +384,14 @@ public class ChooserGameActivity extends AppCompatActivity {
                 mUsername = mFirebaseUser.toString();
                 mEmail = mFirebaseUser.getEmail();
 
-            } else {
+            } else {*/
                 // Google Sign In failed
                 Log.e(TAG, "Google Sign In failed.");
-            }
+       //     }
         }
     }
 
-    private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
+   /* private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
         try {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
             firebaseAuthWithGoogle(account);
@@ -424,7 +426,7 @@ public class ChooserGameActivity extends AppCompatActivity {
                     }
                 });
     }
-
+*/
     @RequiresApi(api = Build.VERSION_CODES.N)
     public Date getFirstofMonth() {
 
@@ -450,6 +452,7 @@ public class ChooserGameActivity extends AppCompatActivity {
 
         return mCurrentDateTime;
     }
+/*
 
     public Action getMessageViewAction(FriendlyMessage friendlyMessage) {
         return new Action.Builder(Action.Builder.VIEW_ACTION)
@@ -478,6 +481,7 @@ public class ChooserGameActivity extends AppCompatActivity {
 
         return messageToIndex;
     }
+*/
 
     @Override
     public void onPause() {
@@ -494,7 +498,7 @@ public class ChooserGameActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
-    // Fetch the config to determine the allowed length of messages.
+   /* // Fetch the config to determine the allowed length of messages.
     public void fetchConfig() {
         long cacheExpiration = 3600; // 1 hour in seconds
         // If developer mode is enabled reduce cacheExpiration to 0 so that each fetch goes to the
@@ -520,7 +524,7 @@ public class ChooserGameActivity extends AppCompatActivity {
                     }
                 });
     }
-
+*/
 
     public void setupDayMode() {
 
@@ -534,13 +538,13 @@ public class ChooserGameActivity extends AppCompatActivity {
         tx = findViewById(R.id.nGameLevel);
         tx.setTextColor(getResources().getColor(R.color.colorBuryware));
 
-        mTournamentButton = findViewById(R.id.tournamnetbutton);
-        Drawable tourneyDrawable = getResources().getDrawable(R.drawable.potofgoldnm);
-        mTournamentButton.setImageDrawable(tourneyDrawable);
+     //   mTournamentButton = findViewById(R.id.tournamnetbutton);
+     //   Drawable tourneyDrawable = getResources().getDrawable(R.drawable.potofgoldnm);
+     //   mTournamentButton.setImageDrawable(tourneyDrawable);
 
-        mFirstUserRecButton = findViewById(R.id.thanksbutton);
-        Drawable thanksDrawable = getResources().getDrawable(R.drawable.thanksfirstusers);
-        mFirstUserRecButton.setImageDrawable(thanksDrawable);
+     //   mFirstUserRecButton = findViewById(R.id.thanksbutton);
+     //   Drawable thanksDrawable = getResources().getDrawable(R.drawable.thanksfirstusers);
+      //  mFirstUserRecButton.setImageDrawable(thanksDrawable);
 
         view.refreshDrawableState();
     }
@@ -557,13 +561,13 @@ public class ChooserGameActivity extends AppCompatActivity {
         tx = findViewById(R.id.nGameLevel);
         tx.setTextColor(Color.WHITE);
 
-        mTournamentButton = findViewById(R.id.tournamnetbutton);
-        Drawable tourneyDrawable = getResources().getDrawable(R.drawable.potofgoldnm);
-        mTournamentButton.setImageDrawable(tourneyDrawable);
+     //   mTournamentButton = findViewById(R.id.tournamnetbutton);
+     //   Drawable tourneyDrawable = getResources().getDrawable(R.drawable.potofgoldnm);
+     //   mTournamentButton.setImageDrawable(tourneyDrawable);
 
-        mFirstUserRecButton = findViewById(R.id.thanksbutton);
-        Drawable thanksDrawable = getResources().getDrawable(R.drawable.thanksfirstusersnm);
-        mFirstUserRecButton.setImageDrawable(thanksDrawable);
+     //   mFirstUserRecButton = findViewById(R.id.thanksbutton);
+    //    Drawable thanksDrawable = getResources().getDrawable(R.drawable.thanksfirstusersnm);
+    //    mFirstUserRecButton.setImageDrawable(thanksDrawable);
 
         view.refreshDrawableState();
     }
@@ -658,7 +662,7 @@ public class ChooserGameActivity extends AppCompatActivity {
 
         mUsername = "Steve Stansbury (def)";
 
-        FriendlyMessage friendlyMessage = new FriendlyMessage(mMsgID, mUsername, mEmail, String.valueOf(nLevel), String.valueOf(nWins), String.valueOf(nLoses), mDate,
+ /*       FriendlyMessage friendlyMessage = new FriendlyMessage(mMsgID, mUsername, mEmail, String.valueOf(nLevel), String.valueOf(nWins), String.valueOf(nLoses), mDate,
                 mTimestamp, mTotalTime, mTourneyDate, mHistory);
 
         DatabaseReference usersRef = FirebaseDatabase.getInstance().getReference("Users/" + mUsername);
@@ -674,7 +678,7 @@ public class ChooserGameActivity extends AppCompatActivity {
             // new record, so add it.
             mFirebaseDatabaseReference.child(MESSAGES_CHILD).push().setValue(friendlyMessage);
             mFirebaseAnalytics.logEvent(MESSAGE_SENT_EVENT, null);
-        }
+        }*/
     }
 
     String getUniqueID(String randseed) {
@@ -683,9 +687,9 @@ public class ChooserGameActivity extends AppCompatActivity {
     }
 
     public void ShowAwards() {
-        Intent intent = new Intent(this, HighAwardsScores.class);
+       /* Intent intent = new Intent(this, HighAwardsScores.class);
         intent.putExtra("night_mode", mNightMode);
-        startActivity(intent);
+        startActivity(intent);*/
     }
 
     public void DoDonation() {
@@ -694,21 +698,21 @@ public class ChooserGameActivity extends AppCompatActivity {
     }
 
     public void DoTournament() {
-        Intent intent = new Intent(this, TournementActivity.class);
+     /*   Intent intent = new Intent(this, TournementActivity.class);
         intent.putExtra("night_mode", mNightMode);
-        startActivity(intent);
+        startActivity(intent);*/
     }
 
     private void DoHighestAwardsScores() {
-        Intent intent = new Intent(this, HighestAwardsScores.class);
+      /*  Intent intent = new Intent(this, HighestAwardsScores.class);
         intent.putExtra("night_mode", mNightMode);
-        startActivity(intent);
+        startActivity(intent);*/
     }
 
     public void DoFirstUserRec() {
-        Intent intent = new Intent(this, ChooseThanksFirstUsers.class);
+      /*  Intent intent = new Intent(this, ChooseThanksFirstUsers.class);
         intent.putExtra("night_mode", mNightMode);
-        startActivity(intent);
+        startActivity(intent);*/
     }
 
     public void buildGameGrid() {
@@ -840,9 +844,9 @@ public class ChooserGameActivity extends AppCompatActivity {
     }
 
     public void applyRetrievedLengthLimit() {
-        Long friendly_msg_length = mFirebaseRemoteConfig.getLong("friendly_msg_length");
+        //Long friendly_msg_length = mFirebaseRemoteConfig.getLong("friendly_msg_length");
         //mMessageEditText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(friendly_msg_length.intValue())});
-        Log.d(TAG, "FML is: " + friendly_msg_length);
+        //Log.d(TAG, "FML is: " + friendly_msg_length);
     }
 }
 

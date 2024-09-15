@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.buryware.burywarechoose">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="com.android.vending.BILLING" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_CALENDAR"/>
-    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
 
    <application
         android:icon="@drawable/choose_logo"
         android:supportsRtl="true"
-        android:label="Choose 2 by Buryware"
+        android:label="Choose 3 by Buryware"
         android:allowBackup="true">
 
         <activity
@@ -55,7 +52,7 @@
                 android:value=".ChooseAboutActivity" />
         </activity>
 
-        <activity
+       <!-- <activity
             android:name=".HighAwardsScores"
             android:theme="@style/AppTheme.NoActionBar"
             android:label="High Scores Buryware" >
@@ -97,7 +94,7 @@
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
-        </service>
+        </service>-->
 
     </application>
 

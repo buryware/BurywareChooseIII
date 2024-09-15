@@ -9,7 +9,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.google.android.gms.appinvite.AppInviteInvitation;
+//import com.google.android.gms.appinvite.AppInviteInvitation;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -113,23 +113,23 @@ public class ChooseActivity extends AppCompatActivity {
         }
 
         if (id == R.id.action_HSmode) {
-            Intent intent = new Intent(this, HighAwardsScores.class);
+    /*        Intent intent = new Intent(this, HighAwardsScores.class);
             intent.putExtra("night_mode", mNightMode);
-            startActivity(intent);
+            startActivity(intent);*/
             return true;
         }
 
         if (id == R.id.action_Highestmode) {
-            Intent intent = new Intent(this, HighestAwardsScores.class);
+           /* Intent intent = new Intent(this, HighestAwardsScores.class);
             intent.putExtra("night_mode", mNightMode);
-            startActivity(intent);
+            startActivity(intent);*/
             return true;
         }
 
         if (id == R.id.action_Thanksmode) {
-            Intent intent = new Intent(this, ChooseThanksFirstUsers.class);
+          /*  Intent intent = new Intent(this, ChooseThanksFirstUsers.class);
             intent.putExtra("night_mode", mNightMode);
-            startActivity(intent);
+            startActivity(intent);*/
             return true;
         }
 
@@ -144,11 +144,11 @@ public class ChooseActivity extends AppCompatActivity {
     }
 
     private void sendInvitation() {
-        Intent intent = new AppInviteInvitation.IntentBuilder(getString(R.string.invitation_title))
+      /*  Intent intent = new AppInviteInvitation.IntentBuilder(getString(R.string.invitation_title))
                 .setMessage(getString(R.string.invitation_message))
                 .setCallToActionText(getString(R.string.invitation_cta))
                 .build();
-        startActivityForResult(intent, REQUEST_INVITE);
+        startActivityForResult(intent, REQUEST_INVITE);*/
     }
 
     public void startNewGame() {

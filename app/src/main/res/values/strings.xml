@@ -1,17 +1,17 @@
 <resources>
-    <string name="app_name" translatable="false">Choose 2</string>
+    <string name="app_name" translatable="false">Choose 3</string>
     <string name="large_header_text0" translatable="false">
-        "Choose 2.0 by Buryware"
+        "Choose 3.0 by Buryware"
     </string>
 
     <string name="large_header_text" translatable="false">
-        "Written by Steve Stansbury\nCopyright © 2015 - 2021.\n\nPick the blue buttons...\nSee how far you can CHOOSE!\n\nGreen is a win, red is a lose.  Get ALL the green, and\nYOU will advance!"
+        "Written by Steve Stansbury\nCopyright © 2015 - 2024.\n\nPick the blue buttons...\nSee how far you can CHOOSE!\n\nGreen is a win, red is a lose.  Get ALL the green, and\nYOU will advance!"
         "\n\nHit the RESET button restart a game\nfrom your current level."
         "\n\nTo completely start over, use the\nStart Over from the menu, or\nrotate your device.\n\nEnjoy!"
     </string>
 
     <string name="large_header_text2" translatable="false">\n
-        "Choose© 2.0 by Buryware.\nCopyright © 2015 - 2019.\n"
+        "Choose© 3.0 by Buryware.\nCopyright © 2015 - 2024.\n"
         "\nWritten by Steve Stansbury"\n</string>
     <string name="firstusersthankstext" translatable="false">>
         "

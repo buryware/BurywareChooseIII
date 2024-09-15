@@ -44,10 +44,10 @@ public class ChooseAboutActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.thanksfirstusers_choose);
+        setContentView(R.layout.activity_choose);
         intent= new Intent();
 
-        mOkay = findViewById(R.id.okaybutton);
+        mOkay = findViewById(R.id.fab);
         mOkay.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)
             {
