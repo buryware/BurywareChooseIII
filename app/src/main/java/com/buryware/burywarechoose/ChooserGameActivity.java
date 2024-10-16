@@ -194,14 +194,12 @@ public class ChooserGameActivity extends AppCompatActivity {
                 }
 
                 if (gameBoard[position] == 0) {  // 0 - green   1 - loser
-
                     i.setImageDrawable(getDrawable(R.drawable.circle_green));
                     gameBoard[position] = -1;
                     nWins++;
                     nTotalWins--;
 
                 } else if (gameBoard[position] == 1){
-
                     i.setImageDrawable(getDrawable(R.drawable.circle_red));
                     gameBoard[position] = -1;
                     nLoses++;
@@ -215,7 +213,6 @@ public class ChooserGameActivity extends AppCompatActivity {
                 UpdateLevelStatus();
                 mGameStatus = findViewById(R.id.statusline);
                 if ((nWins == nWinner) && !mGameOver){
-
                     mGameStatus.setText(R.string.action_win);
                     i.setImageDrawable(getDrawable(R.drawable.check));
                     bLevelUp = true;
@@ -223,13 +220,11 @@ public class ChooserGameActivity extends AppCompatActivity {
                     mGameOver = true;
 
                 } else if ((nLoses == nLoser) && !mGameOver){
-
                     mGameStatus.setText(R.string.action_lose);
                     i.setImageDrawable(getDrawable(R.drawable.error));
                     mGameOver = true;
 
                 } else if (!mGameOver){
-
                     mGameStatus.setText(getString(R.string.Playing));
                 }
             }
@@ -615,10 +610,10 @@ public class ChooserGameActivity extends AppCompatActivity {
          //   lp.height += (screenheight - uiControlsum);
         //}
 
-        if (lp.width < (nLevel * 48 * 4)) {
+        /*if (lp.width < (nLevel * 48 * 4)) {
             //Grid.setLayoutParams(new LinearLayout.LayoutParams((nLevel * 48 * 4), lp.height));
             mGrid.setLayoutParams(new LinearLayout.LayoutParams((nLevel * 48 * 4), (nLevel * 48 * 4)));
-        }
+        }*/
 
        if (nLevel == 1) {
             mGrid.setVerticalSpacing((lp.height / 4) / nLevel);
@@ -782,7 +777,18 @@ public class ChooserGameActivity extends AppCompatActivity {
             if (convertView == null) {
                 iv = new ImageView(ChooserGameActivity.this);
                 iv.setScaleType(ImageView.ScaleType.FIT_CENTER);
-                iv.setLayoutParams(new ViewGroup.LayoutParams(140, 140));
+            //    iv.setLayoutParams(new ViewGroup.LayoutParams(140, 140));
+                if (nLevel < 5){ // first 5
+                    iv.setLayoutParams(new ViewGroup.LayoutParams(250, 250));
+                } else if (nLevel < 10){
+                    iv.setLayoutParams(new ViewGroup.LayoutParams(160, 160));
+                } else if (nLevel < 24){
+                    iv.setLayoutParams(new ViewGroup.LayoutParams(80, 80));
+                } else if (nLevel < 40) {
+                    iv.setLayoutParams(new ViewGroup.LayoutParams(40, 40));
+                }else {
+                    iv.setLayoutParams(new ViewGroup.LayoutParams(20, 20));
+                }
                 //  too small   iv.setLayoutParams(new ViewGroup.LayoutParams(120, 120));
                 l = new CheckableLayout(ChooserGameActivity.this);
                 l.setLayoutParams(new GridView.LayoutParams(GridView.LayoutParams.WRAP_CONTENT,

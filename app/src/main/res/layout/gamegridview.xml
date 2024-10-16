@@ -40,19 +40,19 @@
                 <GridView
                     android:id="@+id/gamegrid"
                     android:layout_width="400dp"
-                    android:layout_height="620dp"
+                    android:layout_height="680dp"
                     android:layout_gravity="center"
                     android:layout_weight="0.7"
                     android:columnWidth="60dp"
                     android:gravity="center"
-                    android:horizontalSpacing="16dp"
+                    android:horizontalSpacing="12dp"
                     android:numColumns="auto_fit"
                     android:scrollIndicators="bottom|right"
                     android:scrollbarAlwaysDrawHorizontalTrack="true"
                     android:scrollbarAlwaysDrawVerticalTrack="true"
                     android:scrollbarSize="10dp"
                     android:stretchMode="columnWidth"
-                    android:verticalSpacing="60dp"
+                    android:verticalSpacing="40dp"
                     android:visibility="visible" />
 
             </LinearLayout>
