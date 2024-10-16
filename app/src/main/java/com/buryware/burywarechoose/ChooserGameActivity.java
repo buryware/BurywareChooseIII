@@ -616,8 +616,8 @@ public class ChooserGameActivity extends AppCompatActivity {
         //}
 
         if (lp.width < (nLevel * 48 * 4)) {
-        mGrid.setLayoutParams(new LinearLayout.LayoutParams((nLevel * 48 * 4), lp.height));
-        //    mGrid.setLayoutParams(new LinearLayout.LayoutParams((nLevel * 48 * 4), (nLevel * 48 * 4)));
+            //Grid.setLayoutParams(new LinearLayout.LayoutParams((nLevel * 48 * 4), lp.height));
+            mGrid.setLayoutParams(new LinearLayout.LayoutParams((nLevel * 48 * 4), (nLevel * 48 * 4)));
         }
 
        if (nLevel == 1) {
