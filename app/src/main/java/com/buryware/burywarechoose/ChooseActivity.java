@@ -24,7 +24,7 @@ public class ChooseActivity extends AppCompatActivity {
     int nLevel = 1;         // game level
     int nCells = 2;         // number of dots
 
-    private boolean mNightMode = true;
+    private boolean mNightMode = false;
     Intent intent = null;
 
    /* public static FirebaseAuth mFirebaseAuth;
@@ -46,7 +46,7 @@ public class ChooseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_choose);
-        intent= new Intent();
+        intent = new Intent();
 
         try {
             Toolbar toolbar = findViewById(R.id.toolbar);
@@ -96,11 +96,11 @@ public class ChooseActivity extends AppCompatActivity {
             return true;
         }
 
-        if (id == R.id.action_invite) {
+      /*  if (id == R.id.action_invite) {
             sendInvitation();
 
             return true;
-        }
+        }*/
 
         if (id == R.id.action_nightmode) {
             mNightMode = !mNightMode;
@@ -112,45 +112,45 @@ public class ChooseActivity extends AppCompatActivity {
             return true;
         }
 
-        if (id == R.id.action_HSmode) {
-    /*        Intent intent = new Intent(this, HighAwardsScores.class);
+      /*  if (id == R.id.action_HSmode) {
+    *//*        Intent intent = new Intent(this, HighAwardsScores.class);
             intent.putExtra("night_mode", mNightMode);
-            startActivity(intent);*/
+            startActivity(intent);*//*
             return true;
         }
 
         if (id == R.id.action_Highestmode) {
-           /* Intent intent = new Intent(this, HighestAwardsScores.class);
+           *//* Intent intent = new Intent(this, HighestAwardsScores.class);
             intent.putExtra("night_mode", mNightMode);
-            startActivity(intent);*/
+            startActivity(intent);*//*
             return true;
         }
 
         if (id == R.id.action_Thanksmode) {
-          /*  Intent intent = new Intent(this, ChooseThanksFirstUsers.class);
+          *//*  Intent intent = new Intent(this, ChooseThanksFirstUsers.class);
             intent.putExtra("night_mode", mNightMode);
-            startActivity(intent);*/
+            startActivity(intent);*//*
             return true;
-        }
+        }*/
 
-        if (id == R.id.action_about) {
+       /* if (id == R.id.action_about) {
             Intent intent = new Intent(this, ChooseAboutActivity.class);
             intent.putExtra("night_mode", mNightMode);
             startActivity(intent);
             return true;
-        }
+        }*/
 
         return super.onOptionsItemSelected(item);
     }
 
-    private void sendInvitation() {
-      /*  Intent intent = new AppInviteInvitation.IntentBuilder(getString(R.string.invitation_title))
+    /*private void sendInvitation() {
+      *//*  Intent intent = new AppInviteInvitation.IntentBuilder(getString(R.string.invitation_title))
                 .setMessage(getString(R.string.invitation_message))
                 .setCallToActionText(getString(R.string.invitation_cta))
                 .build();
-        startActivityForResult(intent, REQUEST_INVITE);*/
+        startActivityForResult(intent, REQUEST_INVITE);*//*
     }
-
+*/
     public void startNewGame() {
 
         intent = new Intent(this, ChooserGameActivity.class);

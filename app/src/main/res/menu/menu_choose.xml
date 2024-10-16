@@ -2,8 +2,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".ChooseActivity">
 
-    <item android:id="@+id/action_about" android:title="@string/action_about"
-        android:orderInCategory="100" app:showAsAction="never" />
+   <!-- <item android:id="@+id/action_about" android:title="@string/action_about"
+        android:orderInCategory="100" app:showAsAction="never" />-->
 
     <item android:id="@+id/action_startover" android:title="@string/action_settings"
         android:orderInCategory="100" app:showAsAction="never" />
@@ -11,19 +11,19 @@
     <item android:id="@+id/action_nightmode" android:title="@string/night_mode_on_off"
         android:orderInCategory="100" app:showAsAction="never" />
 
-    <item android:id="@+id/action_HSmode" android:title="@string/HS_mode"
+   <!-- <item android:id="@+id/action_HSmode" android:title="@string/HS_mode"
         android:orderInCategory="100" app:showAsAction="never" />
 
     <item android:id="@+id/action_Highestmode" android:title="@string/Highest_mode"
         android:orderInCategory="100" app:showAsAction="never" />
 
     <item android:id="@+id/action_Thanksmode" android:title="@string/FirstUsersthanks_mode"
-        android:orderInCategory="100" app:showAsAction="never" />
+        android:orderInCategory="100" app:showAsAction="never" />-->
 
     <item android:id="@+id/action_donate" android:title="@string/action_donate"
         android:orderInCategory="100" app:showAsAction="never" />
 
-    <item android:id="@+id/action_invite" android:title="@string/action_invite"
-        android:orderInCategory="100" app:showAsAction="never" />
+    <!--<item android:id="@+id/action_invite" android:title="@string/action_invite"
+        android:orderInCategory="100" app:showAsAction="never" />-->
 
 </menu>

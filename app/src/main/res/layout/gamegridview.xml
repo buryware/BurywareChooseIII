@@ -30,7 +30,7 @@
         <HorizontalScrollView
             android:id="@+id/horScrollview"
             android:layout_width="match_parent"
-            android:layout_height="635dp">
+            android:layout_height="575dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -40,15 +40,19 @@
                 <GridView
                     android:id="@+id/gamegrid"
                     android:layout_width="400dp"
-                    android:layout_height="0dp"
+                    android:layout_height="620dp"
                     android:layout_gravity="center"
                     android:layout_weight="0.7"
-                    android:columnWidth="65dp"
+                    android:columnWidth="60dp"
                     android:gravity="center"
-                    android:horizontalSpacing="65dp"
+                    android:horizontalSpacing="16dp"
                     android:numColumns="auto_fit"
+                    android:scrollIndicators="bottom|right"
+                    android:scrollbarAlwaysDrawHorizontalTrack="true"
+                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                    android:scrollbarSize="10dp"
                     android:stretchMode="columnWidth"
-                    android:verticalSpacing="65dp"
+                    android:verticalSpacing="60dp"
                     android:visibility="visible" />
 
             </LinearLayout>

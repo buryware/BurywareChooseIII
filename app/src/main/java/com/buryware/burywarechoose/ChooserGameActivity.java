@@ -611,15 +611,16 @@ public class ChooserGameActivity extends AppCompatActivity {
         int screenwidth = metrics.widthPixels;
         int screenheight = metrics.heightPixels;
 
-        if (screenheight > uiControlsum + 50) {
-            lp.height += (screenheight - uiControlsum);
-        }
+        //if (screenheight > uiControlsum + 50) {
+         //   lp.height += (screenheight - uiControlsum);
+        //}
 
         if (lp.width < (nLevel * 48 * 4)) {
-            mGrid.setLayoutParams(new LinearLayout.LayoutParams((nLevel * 48 * 4), lp.height));
+        mGrid.setLayoutParams(new LinearLayout.LayoutParams((nLevel * 48 * 4), lp.height));
+        //    mGrid.setLayoutParams(new LinearLayout.LayoutParams((nLevel * 48 * 4), (nLevel * 48 * 4)));
         }
 
-        if (nLevel == 1){
+       if (nLevel == 1) {
             mGrid.setVerticalSpacing((lp.height / 4) / nLevel);
         } else {
             mGrid.setVerticalSpacing((lp.height / 2) / nLevel);
@@ -645,7 +646,8 @@ public class ChooserGameActivity extends AppCompatActivity {
     }
 
     public void startOver() {
-        nLevel = 1;
+        // nLevel = 1;  // default
+        nLevel = 3;
         resetGame();
     }
 
@@ -780,7 +782,8 @@ public class ChooserGameActivity extends AppCompatActivity {
             if (convertView == null) {
                 iv = new ImageView(ChooserGameActivity.this);
                 iv.setScaleType(ImageView.ScaleType.FIT_CENTER);
-                iv.setLayoutParams(new ViewGroup.LayoutParams(150, 150));
+                iv.setLayoutParams(new ViewGroup.LayoutParams(140, 140));
+                //  too small   iv.setLayoutParams(new ViewGroup.LayoutParams(120, 120));
                 l = new CheckableLayout(ChooserGameActivity.this);
                 l.setLayoutParams(new GridView.LayoutParams(GridView.LayoutParams.WRAP_CONTENT,
                            GridView.LayoutParams.WRAP_CONTENT));
