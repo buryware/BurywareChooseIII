@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.buryware.burywarechoose;
+package com.buryware.burywarechoose3;
 
 import android.content.Intent;
 import android.os.Bundle;
